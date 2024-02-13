@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tidak Hadir</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to bottom,
+                    #021c1e,
+                    #004445,
+                    #2c7873,
+                    #6fb98f);
+        }
+
+        .in {
+            background: linear-gradient(to top, #021c1e, #004445, #2c7873, #6fb98f);
+            padding: 30px 100px;
+            border: 3px dashed #fff;
+            display: none;
+        }
+
+        .in:hover {
+            border: 1px solid #fff;
+            transition: all 1.1s;
+            background: linear-gradient(to left,
+                    #021c1e,
+                    #004445,
+                    #2c7873,
+                    #6fb98f);
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .pass {
+            background-color: #fff;
+            padding: 30px;
+        }
+
+        input {
+            padding: 7px;
+            width: 250px;
+            margin: 15px 0px;
+        }
+
+        button {
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pass" id="pass">
+        <form id="form" onsubmit="lain() ; return false;">
+            <label for="pw">Password : </label>
+            <br />
+            <input type="text" name="pw" id="pw" required minlength="5" />
+            <br />
+            <button type="submit" value="submit" id="btn">Kirim</button>
+        </form>
+    </div>
+
+    <a href="https://forms.gle/jiqzuoSrNjAeMpjc9">
+        <div class="in" id="in">Lainnya</div>
+    </a>
+
+    <script>
+        function lain() {
+            var inp = document.getElementById("pw").value;
+            var divPaswd = document.getElementById('pass');
+            var divIn = document.getElementById('in');
+        
+            if (inp === "Songgat12.") {
+                divPaswd.style.display = 'none';
+                divIn.style.display = 'block';
+            } else {
+                alert("Password salah!");
+            }
+        }
+        
+    </script>
+</body>
+
+</html>
